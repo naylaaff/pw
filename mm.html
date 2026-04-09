@@ -98,3 +98,103 @@ header h1 {
 
 /* TEAM */
 .team-photo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+}
+
+/* SECTION */
+.section {
+    margin-bottom: 35px;
+}
+
+.section h2 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* TENTANG PARAGRAF */
+.about-text {
+    line-height: 1.6;
+    font-size: 14px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--accent);
+}
+
+/* PROJECT */
+.project-main {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1.5px solid var(--accent);
+}
+
+/* FITUR */
+.project-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.detail {
+    background: var(--secondary);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.detail i {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: var(--secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-card {
+    background: rgba(255,255,255,0.7);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+/* TAMBAHAN SIDEBAR */
+.mini-box {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--accent);
+    font-size: 13px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 30px;
