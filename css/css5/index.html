@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -38,9 +39,6 @@ z-index:999;
 }
 nav a{color:var(--text);text-decoration:none;font-weight:500;}
 nav i{color:var(--accent);}
-  
-/* SCROLL FIX */
-.section{scroll-margin-top:80px;}
 
 /* FLOATING */
 .floating i{
@@ -58,7 +56,7 @@ animation:float 6s infinite ease-in-out;
 .floating i:nth-child(6){top:35%;right:10%;font-size:30px;}
 .floating i:nth-child(7){bottom:15%;right:8%;font-size:35px;}
 .floating i:nth-child(8){bottom:5%;left:45%;font-size:28px;}
-  .floating i:nth-child(9){top:60%;right:30%;font-size:25px;}
+.floating i:nth-child(9){top:60%;right:30%;font-size:25px;}
 .floating i:nth-child(10){bottom:30%;left:30%;font-size:25px;}
 
 @keyframes float{
@@ -136,29 +134,46 @@ border:1px solid var(--accent);
 font-size:13px;
 }
 
-/* EXTRA */
+/* EXTRA (BAGIAN BAWAH RAPIIH) */
 .extra{
-padding:50px;
+padding:60px 80px;
 background:var(--secondary);
 border-top:3px solid var(--accent);
 }
+
+.extra h2{
+color:var(--text);
+margin-bottom:10px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
 .extra-box{
 background:white;
-padding:20px;
-border-radius:12px;
+padding:18px 20px;
+border-radius:10px;
 border:1px solid var(--accent);
-margin-top:15px;
-transition:0.3s;
+margin-bottom:25px;
+line-height:1.8;
 }
-.extra-box:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 20px rgba(63,174,124,0.25);
+
+.extra-box p{
+margin:6px 0;
+display:flex;
+align-items:center;
+gap:8px;
 }
+
+.extra i{
+color:var(--accent);
+}
+
 .divider{
-height:2px;
+height:1px;
 background:var(--accent);
 margin:25px 0;
-opacity:0.3;
+opacity:0.4;
 }
 
 /* POPUP */
@@ -180,16 +195,17 @@ border-top:5px solid var(--accent);
 }
 .close{cursor:pointer;float:right;}
 
-/* FLOAT BUTTON */
-.float-btn{
+/* TOAST */
+#toast{
 position:fixed;
 bottom:20px;
 right:20px;
 background:var(--accent);
 color:white;
-padding:15px;
-border-radius:50%;
-cursor:pointer;
+padding:12px 20px;
+border-radius:8px;
+display:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
@@ -213,7 +229,6 @@ border-top:2px solid var(--accent);
 <a href="#portfolio"><i class="fa-solid fa-briefcase-medical"></i> Portofolio</a>
 </nav>
 
-<!-- FLOATING -->
 <div class="floating">
 <i class="fa-solid fa-heart-pulse"></i>
 <i class="fa-solid fa-pills"></i>
@@ -237,10 +252,10 @@ border-top:2px solid var(--accent);
 <div class="main">
 
 <div class="team-photo">
-<div class="member"><img src="nay.jpeg"><h4>Nayla Firzatul J.</h4><p>Backend</p></div>
-<div class="member"><img src="ezrina.jpeg"><h4>Ezrina Lativani</h4><p>Frontend</p></div>
-<div class="member"><img src="aliqa.jpeg"><h4>Aliqa Luthfiana S.</h4><p>Database</p></div>
-<div class="member"><img src="sabrinaa.jpeg"><h4>Sabrina Ayu K.</h4><p>UI/UX</p></div>
+<div class="member"><img src="nay.jpeg"><h4>Nayla</h4><p>Backend</p></div>
+<div class="member"><img src="ezrina.jpeg"><h4>Ezrina</h4><p>Frontend</p></div>
+<div class="member"><img src="aliqa.jpeg"><h4>Aliqa</h4><p>Database</p></div>
+<div class="member"><img src="sabrinaa.jpeg"><h4>Sabrina</h4><p>UI/UX</p></div>
 </div>
 
 <div class="section" id="about">
@@ -264,7 +279,6 @@ Kami adalah tim mahasiswa informatika yang mengembangkan aplikasi kesehatan digi
 <div class="project-main" onclick="openPopup('Tracking','Monitoring konsumsi obat harian.')">
 <i class="fa-solid fa-check"></i> Tracking
 </div>
-
 
 <div class="project-main" onclick="openPopup('Export','Export data ke Excel.')">
 <i class="fa-solid fa-file-excel"></i> Export
@@ -323,6 +337,9 @@ MedMinder merupakan aplikasi yang membantu pengguna dalam mengatur jadwal konsum
 
 </div>
 
+<!-- TOAST -->
+<div id="toast"></div>
+
 <!-- POPUP -->
 <div class="popup" id="popup">
 <div class="popup-content">
@@ -330,10 +347,6 @@ MedMinder merupakan aplikasi yang membantu pengguna dalam mengatur jadwal konsum
 <h3 id="popTitle"></h3>
 <p id="popDesc"></p>
 </div>
-</div>
-
-<div class="float-btn" onclick="openPopup('Info','Aplikasi kesehatan modern')">
-<i class="fa-solid fa-bell"></i>
 </div>
 
 <footer>
@@ -345,11 +358,18 @@ function openPopup(t,d){
 popup.style.display="flex";
 popTitle.innerText=t;
 popDesc.innerText=d;
+showToast("Fitur " + t + " dibuka");
 }
 function closePopup(){
 popup.style.display="none";
+}
+function showToast(msg){
+toast.innerText=msg;
+toast.style.display="block";
+setTimeout(()=>{toast.style.display="none";},2000);
 }
 </script>
 
 </body>
 </html>
+```
