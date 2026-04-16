@@ -177,3 +177,90 @@ padding:20px;
 border-radius:12px;
 width:320px;
 border-top:5px solid var(--accent);
+}
+.close{cursor:pointer;float:right;}
+
+/* FLOAT BUTTON */
+.float-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:var(--accent);
+color:white;
+padding:15px;
+border-radius:50%;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:var(--secondary);
+border-top:2px solid var(--accent);
+}
+
+@media(max-width:768px){
+.container{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about"><i class="fa-solid fa-users"></i> Tentang</a>
+<a href="#portfolio"><i class="fa-solid fa-briefcase-medical"></i> Portofolio</a>
+</nav>
+
+<!-- FLOATING -->
+<div class="floating">
+<i class="fa-solid fa-heart-pulse"></i>
+<i class="fa-solid fa-pills"></i>
+<i class="fa-solid fa-stethoscope"></i>
+<i class="fa-solid fa-kit-medical"></i>
+<i class="fa-solid fa-syringe"></i>
+<i class="fa-solid fa-capsules"></i>
+<i class="fa-solid fa-notes-medical"></i>
+<i class="fa-solid fa-user-doctor"></i>
+<i class="fa-solid fa-heart"></i>
+<i class="fa-solid fa-briefcase-medical"></i>
+</div>
+
+<header>
+<h1><i class="fa-solid fa-heart-pulse"></i> MedMinder</h1>
+<p>Monitoring Kesehatan Harian</p>
+</header>
+
+<div class="container">
+
+<div class="main">
+
+<div class="team-photo">
+<div class="member"><img src="https://via.placeholder.com/100"><h4>Ezrina</h4><p>Backend</p></div>
+<div class="member"><img src="https://via.placeholder.com/100"><h4>Nama 2</h4><p>Frontend</p></div>
+<div class="member"><img src="https://via.placeholder.com/100"><h4>Nama 3</h4><p>Database</p></div>
+<div class="member"><img src="https://via.placeholder.com/100"><h4>Nama 4</h4><p>UI/UX</p></div>
+</div>
+
+<div class="section" id="about">
+<h2><i class="fa-solid fa-users"></i> Tentang Kami</h2>
+<div class="about-text">
+Kami adalah tim mahasiswa informatika yang mengembangkan aplikasi kesehatan digital untuk membantu pengguna dalam mengelola konsumsi obat secara lebih teratur dan efisien.
+</div>
+</div>
+
+<div class="section" id="portfolio">
+<h2><i class="fa-solid fa-briefcase-medical"></i> Portofolio</h2>
+
+<div class="project-main" onclick="openPopup('QR Login','Login menggunakan barcode agar cepat dan aman.')">
+<i class="fa-solid fa-barcode"></i> QR Login
+</div>
+
+<div class="project-main" onclick="openPopup('Jadwal','Penjadwalan otomatis minum obat.')">
+<i class="fa-solid fa-clock"></i> Jadwal
+</div>
+
+<div class="project-main" onclick="openPopup('Tracking','Monitoring konsumsi obat harian.')">
+<i class="fa-solid fa-check"></i> Tracking
+</div>
