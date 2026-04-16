@@ -1,0 +1,15 @@
+Point (Pernyataan Utama)
+
+Web Programming merupakan proses pengembangan aplikasi berbasis web yang menggabungkan HTML, CSS, dan JavaScript untuk menciptakan sistem yang interaktif, dinamis, dan responsif terhadap pengguna. Dalam perkembangannya, web programming tidak hanya berfokus pada pembuatan tampilan, tetapi juga pada bagaimana data dikelola dan bagaimana sistem merespons interaksi pengguna melalui konsep DOM dan event. Oleh karena itu, untuk menghadapi kompleksitas aplikasi modern, penggunaan framework seperti React, Vue.js, dan Angular menjadi sangat penting dalam menciptakan aplikasi yang lebih terstruktur dan efisien.
+
+Reason (Alasan/Penjelasan)
+
+Alasan utama penggunaan konsep dalam web programming terletak pada cara kerja dasar teknologi web itu sendiri. HTML berfungsi sebagai struktur utama yang menyusun elemen-elemen halaman seperti teks, gambar, dan form input. CSS berperan dalam memperindah tampilan agar lebih menarik dan responsif di berbagai perangkat. Sementara itu, JavaScript memungkinkan halaman web untuk menjadi interaktif melalui manipulasi DOM, yaitu representasi struktur HTML dalam bentuk objek. Selain itu, interaksi pengguna ditangani melalui event seperti klik, input, dan submit yang diproses menggunakan event listener. Namun, ketika aplikasi semakin kompleks, penggunaan JavaScript secara langsung sering menyebabkan kode menjadi panjang, tidak terstruktur, dan sulit untuk dipelihara. Framework hadir sebagai solusi dengan menyediakan arsitektur yang lebih rapi, konsep komponen yang dapat digunakan kembali, serta sistem reaktivitas yang membuat perubahan data secara otomatis memperbarui tampilan tanpa perlu manipulasi DOM secara manual.
+
+Example (Contoh)
+
+Sebagai contoh, dalam pengembangan aplikasi sederhana, seorang developer dapat langsung mengambil data dari input pengguna, kemudian memproses dan menampilkannya kembali ke halaman menggunakan JavaScript dan DOM. Pendekatan ini masih efektif untuk aplikasi kecil. Namun, ketika aplikasi berkembang menjadi lebih kompleks, seperti memiliki banyak form, validasi data, dan interaksi real-time, maka pengelolaan DOM secara manual menjadi tidak efisien. Dalam kondisi ini, framework seperti React memungkinkan pembuatan antarmuka berbasis komponen yang dapat digunakan kembali, Vue.js mempermudah pengelolaan data dengan sistem reaktif, dan Angular menyediakan struktur yang lengkap untuk aplikasi berskala besar. Dengan menggunakan framework, proses pengembangan menjadi lebih cepat, terorganisir, dan mudah untuk dikembangkan lebih lanjut.
+
+Point (Penegasan Ulang)
+
+Berdasarkan penjelasan tersebut, dapat ditegaskan kembali bahwa Web Programming merupakan kombinasi antara struktur, tampilan, dan interaksi yang dikelola melalui DOM dan event. Namun, dalam menghadapi tuntutan aplikasi modern yang semakin kompleks, penggunaan framework menjadi bagian penting dalam proses pengembangan. Dengan pendekatan PREP, dapat dipahami bahwa framework bukan hanya alat bantu, melainkan solusi utama untuk menciptakan aplikasi web yang efisien, terstruktur, dan scalable, sehingga mampu memenuhi kebutuhan pengguna secara optimal.
