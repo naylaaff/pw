@@ -34,6 +34,7 @@ Mengambil nilai atau isi dari sebuah inputan:
 
 JavaScript
 let data = inputUser.value;
+
 4. Point (Penegasan Ulang)
 Sebagai kesimpulan, penguasaan DOM Selection dan Vanilla JS adalah fondasi utama sebelum melangkah ke framework JavaScript yang lebih kompleks. 
 Dengan memahami cara kerja querySelector, getElementById, serta penanganan event seperti alert dan console, seorang pengembang memiliki kontrol penuh 
