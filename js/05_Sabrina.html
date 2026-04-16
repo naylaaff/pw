@@ -3,6 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Login Sederhana</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, purple, blue);
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            border-radius: 8px;
+            border: none;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: purple;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,7 +52,7 @@
         let username = document.getElementById("username");
 
         btnLogin.addEventListener("click", function() {
-            username.value = "Sabrina";
+            username.value = "Login Berhasil 💜";
         });
     </script>
 
