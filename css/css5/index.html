@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedMinder</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+    --primary: #F7FAF9;
+    --secondary: #EAF7F0;
+    --accent: #3FAE7C;
+    --text: #22352F;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--primary);
+    color:var(--text);
+}
+
+/* NAV */
+nav{
+position:sticky;
+top:0;
+background:white;
+padding:12px;
+display:flex;
+justify-content:center;
+gap:30px;
+border-bottom:2px solid var(--accent);
+z-index:999;
+}
+nav a{color:var(--text);text-decoration:none;font-weight:500;}
+nav i{color:var(--accent);}
+  
+/* SCROLL FIX */
+.section{scroll-margin-top:80px;}
+
+/* FLOATING */
+.floating i{
+position:absolute;
+color:var(--accent);
+opacity:0.22;
+text-shadow:0 0 10px rgba(63,174,124,0.4);
+animation:float 6s infinite ease-in-out;
+}
+.floating i:nth-child(1){top:5%;left:5%;font-size:40px;}
+.floating i:nth-child(2){top:20%;left:15%;font-size:30px;}
+.floating i:nth-child(3){top:40%;left:8%;font-size:35px;}
+.floating i:nth-child(4){top:70%;left:12%;font-size:28px;}
+.floating i:nth-child(5){top:10%;right:5%;font-size:40px;}
+.floating i:nth-child(6){top:35%;right:10%;font-size:30px;}
+.floating i:nth-child(7){bottom:15%;right:8%;font-size:35px;}
+.floating i:nth-child(8){bottom:5%;left:45%;font-size:28px;}
+  .floating i:nth-child(9){top:60%;right:30%;font-size:25px;}
+.floating i:nth-child(10){bottom:30%;left:30%;font-size:25px;}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+/* HEADER */
+header{text-align:center;padding:25px;border-bottom:2px solid var(--accent);}
+header h1{color:var(--accent);}
+
+/* GRID */
+.container{display:grid;grid-template-columns:1.8fr 0.8fr;}
+.main{padding:40px;border-right:2px solid var(--accent);}
+
+/* TEAM */
+.team-photo{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:30px;
+text-align:center;
+}
+.member img{
+width:80px;height:80px;
+border-radius:50%;
+border:2px solid var(--accent);
+}
