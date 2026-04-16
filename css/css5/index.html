@@ -264,3 +264,92 @@ Kami adalah tim mahasiswa informatika yang mengembangkan aplikasi kesehatan digi
 <div class="project-main" onclick="openPopup('Tracking','Monitoring konsumsi obat harian.')">
 <i class="fa-solid fa-check"></i> Tracking
 </div>
+
+
+<div class="project-main" onclick="openPopup('Export','Export data ke Excel.')">
+<i class="fa-solid fa-file-excel"></i> Export
+</div>
+
+</div>
+
+</div>
+
+<div class="sidebar">
+<div class="side-card"><i class="fa-solid fa-heart"></i> Kesehatan Digital</div>
+<div class="side-card"><i class="fa-solid fa-pills"></i> Manajemen Obat</div>
+<div class="side-card"><i class="fa-solid fa-chart-line"></i> Tracking</div>
+
+<div class="mini-box">
+<b>Project Info</b><br>
+Tim: 4 Orang<br>Status: Aktif
+</div>
+
+<div class="mini-box">
+<b>Kontak</b><br>
+medminder@mail.com
+</div>
+</div>
+
+</div>
+
+<!-- BAGIAN BAWAH -->
+<div class="extra">
+
+<h2><i class="fa-solid fa-notes-medical"></i> Informasi Tambahan</h2>
+<div class="extra-box">
+<p>
+MedMinder merupakan aplikasi yang membantu pengguna dalam mengatur jadwal konsumsi obat secara otomatis dan terstruktur, sehingga dapat mengurangi risiko lupa serta meningkatkan efektivitas penggunaan obat.
+</p>
+</div>
+
+<div class="divider"></div>
+
+<h2><i class="fa-solid fa-capsules"></i> Fitur Utama</h2>
+<div class="extra-box">
+<p><i class="fa-solid fa-barcode"></i> Login menggunakan QR Code</p>
+<p><i class="fa-solid fa-clock"></i> Penjadwalan otomatis</p>
+<p><i class="fa-solid fa-check-circle"></i> Monitoring konsumsi harian</p>
+<p><i class="fa-solid fa-file-excel"></i> Export data ke Excel</p>
+</div>
+
+<div class="divider"></div>
+
+<h2><i class="fa-solid fa-star"></i> Keunggulan</h2>
+<div class="extra-box">
+<p><i class="fa-solid fa-circle-check"></i> Mudah digunakan</p>
+<p><i class="fa-solid fa-circle-check"></i> Sistem efisien</p>
+<p><i class="fa-solid fa-circle-check"></i> Membantu disiplin kesehatan</p>
+</div>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">X</span>
+<h3 id="popTitle"></h3>
+<p id="popDesc"></p>
+</div>
+</div>
+
+<div class="float-btn" onclick="openPopup('Info','Aplikasi kesehatan modern')">
+<i class="fa-solid fa-bell"></i>
+</div>
+
+<footer>
+<i class="fa-solid fa-heart-pulse"></i> MedMinder 2026
+</footer>
+
+<script>
+function openPopup(t,d){
+popup.style.display="flex";
+popTitle.innerText=t;
+popDesc.innerText=d;
+}
+function closePopup(){
+popup.style.display="none";
+}
+</script>
+
+</body>
+</html>
