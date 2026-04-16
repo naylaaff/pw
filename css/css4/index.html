@@ -150,68 +150,70 @@ header h1 {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
-.extra-box:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 20px rgba(63,174,124,0.25);
-}
-.divider{
-height:2px;
-background:var(--accent);
-margin:25px 0;
-opacity:0.3;
+
+.detail {
+    background: var(--secondary);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
 }
 
-/* POPUP */
-.popup{
-display:none;
-position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-background:rgba(0,0,0,0.5);
-justify-content:center;
-align-items:center;
+.detail i {
+    display: block;
+    margin-bottom: 5px;
 }
-.popup-content{
-background:white;
-padding:20px;
-border-radius:12px;
-width:320px;
-border-top:5px solid var(--accent);
-}
-.close{cursor:pointer;float:right;}
 
-/* FLOAT BUTTON */
-.float-btn{
-position:fixed;
-bottom:20px;
-right:20px;
-background:var(--accent);
-color:white;
-padding:15px;
-border-radius:50%;
-cursor:pointer;
+/* SIDEBAR */
+.sidebar {
+    background: var(--secondary);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-card {
+    background: rgba(255,255,255,0.7);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+/* TAMBAHAN SIDEBAR */
+.mini-box {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--accent);
+    font-size: 13px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5px;
 }
 
 /* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:var(--secondary);
-border-top:2px solid var(--accent);
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background: var(--secondary);
+    border-top: 2px solid var(--accent);
 }
 
+/* RESPONSIVE */
 @media(max-width:768px){
-.container{grid-template-columns:1fr;}
+    .container{
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
 
 <body>
-
-<nav>
-<a href="#about"><i class="fa-solid fa-users"></i> Tentang</a>
-<a href="#portfolio"><i class="fa-solid fa-briefcase-medical"></i> Portofolio</a>
-</nav>
 
 <!-- FLOATING -->
 <div class="floating">
@@ -224,5 +226,3 @@ border-top:2px solid var(--accent);
 <i class="fa-solid fa-notes-medical"></i>
 <i class="fa-solid fa-user-doctor"></i>
 <i class="fa-solid fa-heart"></i>
-<i class="fa-solid fa-briefcase-medical"></i>
-</div>
