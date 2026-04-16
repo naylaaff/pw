@@ -2,15 +2,19 @@
 <html>
 <body>
 
-<input type="text" id="username" placeholder="Masukkan username">
-<button id="btnLogin">Login</button>
+<p>Username</p>
+<input type="text" id="username">
 
-<p id="hasil"></p>
+<p>Sandi</p>
+<input type="password" id="password">
+
+<br><br>
+<button id="btnLogin">Login</button>
 
 <script>
   document.getElementById("btnLogin").onclick = function() {
-    let user = document.getElementById("username").value;
-    document.getElementById("hasil").innerText = "Username: " + user;
+    let user = document.getElementById("username");
+    user.value = "username"; // isi input berubah jadi "username"
   }
 </script>
 
