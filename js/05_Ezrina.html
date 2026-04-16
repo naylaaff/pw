@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Materi DOM & JS Vanilla</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 20px auto; padding: 20px; background-color: #f4f4f9; }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { border-bottom: 2px solid #2c3e50; color: #2c3e50; padding-bottom: 10px; }
+        .prep-section { margin-bottom: 25px; padding: 15px; border-left: 5px solid #3498db; background: #ebf5fb; }
+        .prep-section h2 { margin-top: 0; color: #2980b9; font-size: 1.2em; text-transform: uppercase; }
+        ul { padding-left: 20px; }
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; font-family: monospace; }
+        .highlight { font-weight: bold; color: #e67e22; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Materi: DOM Selection & JS Vanilla</h1>
+
+    <div class="prep-section">
+        <h2>P - Point (Titik Utama)</h2>
+        <p>Materi ini membahas dasar-dasar memanipulasi <strong>DOM (Document Object Model)</strong> menggunakan <strong>JavaScript Vanilla</strong>. Fokus utamanya adalah memahami bagaimana HTML, CSS, dan JS bekerja sama untuk menciptakan interaktivitas tanpa bantuan framework luar.</p>
+    </div>
+
+    <div class="prep-section">
+        <h2>R - Reason (Alasan)</h2>
+        <p>Mengapa ini penting? Memahami JS Native/Vanilla adalah fondasi sebelum masuk ke framework besar (seperti React). Hal ini memungkinkan optimasi kode yang lebih baik, performa yang lebih ringan, dan pemahaman mendalam tentang bagaimana browser memproses input pengguna.</p>
+    </div>
+
+    <div class="prep-section">
+        <h2>E - Explanation (Penjelasan)</h2>
+        <p>Berdasarkan catatan papan tulis, ada tiga pilar utama yang dipelajari:</p>
+        <ul>
+            <li><strong>1. DOM Selector:</strong> Teknik mengambil elemen.
+                <ul>
+                    <li><code>getElementById</code>: Mencari elemen berdasarkan ID unik (Sangat Cepat).</li>
+                    <li><code>querySelector</code>: Lebih fleksibel, bisa menggunakan selector Class, ID, atau Tag.</li>
+                </ul>
+            </li>
+            <li><strong>2. Event Listener:</strong> Pemicu aksi berdasarkan interaksi pengguna.
+                <ul>
+                    <li>Contoh: <code>onclick</code> (klik), <code>onchange</code> (perubahan input), dan <code>onpress</code> (tekan tombol).</li>
+                    <li>Menggunakan fungsi <em>callback</em> untuk menjalankan logika saat kejadian berlangsung.</li>
+                </ul>
+            </li>
+            <li><strong>3. Data Handling:</strong> Mengolah informasi.
+                <ul>
+                    <li>Mengambil nilai input melalui properti <code>.value</code>.</li>
+                    <li>Menampilkan output menggunakan <code>alert()</code> atau <code>console.log()</code> untuk optimasi dan debugging.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="prep-section">
+        <h2>P - Point (Kesimpulan)</h2>
+        <p>Dengan menguasai alur <strong>Selector &rarr; Event &rarr; Action</strong>, seorang pengembang web memiliki kontrol penuh atas fungsionalitas halaman sebelum akhirnya berpindah ke penggunaan framework modern.</p>
+    </div>
+</div>
+
+</body>
+</html>
