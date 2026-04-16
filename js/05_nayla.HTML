@@ -1,32 +1,18 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Contoh Login DOM</title>
-</head>
+<html>
 <body>
 
-  <h2>Login</h2>
+<input type="text" id="username" placeholder="Masukkan username">
+<button id="btnLogin">Login</button>
 
-  Username: <input type="text" id="username"><br><br>
-  Password: <input type="password" id="password"><br><br>
+<p id="hasil"></p>
 
-  <button id="btnLogin">Login</button>
-
-  <p id="hasil"></p>
-
-  <script>
-    // ambil elemen
-    let btnLogin = document.getElementById("btnLogin");
-    let username = document.getElementById("username");
-    let hasil = document.getElementById("hasil");
-
-    // event saat tombol diklik
-    btnLogin.addEventListener("click", function() {
-      let user = username.value; // ambil isi input
-      hasil.innerText = "Username: " + user; // tampilkan
-    });
-  </script>
+<script>
+  document.getElementById("btnLogin").onclick = function() {
+    let user = document.getElementById("username").value;
+    document.getElementById("hasil").innerText = "Username: " + user;
+  }
+</script>
 
 </body>
 </html>
