@@ -1,4 +1,5 @@
 Berdasarkan catatan pada papan tulis tersebut, berikut adalah penjelasan komprehensif mengenai dasar-dasar **DOM Manipulation menggunakan JavaScript Vanilla** dengan menggunakan framework **PREP** (Point, Reason, Explanation, Example).
+
 P: Point (Titik Utama)
 Materi dalam foto tersebut berfokus pada teknik memanipulasi **DOM (Document Object Model)** secara murni (Vanilla JS) untuk menciptakan interaktivitas pada halaman web tanpa bergantung pada framework besar. Intinya adalah menghubungkan struktur HTML dengan logika JavaScript melalui tiga pilar: **Selector, Event Listener, dan Data Handling.**
 
