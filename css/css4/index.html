@@ -74,3 +74,79 @@ h1,h2,h3 {
 }
 
 /* HEADER */
+header {
+    text-align: center;
+    padding: 25px;
+    border-bottom: 2px solid var(--accent);
+}
+
+header h1 {
+    color: var(--accent);
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: 1.8fr 0.8fr;
+}
+
+/* MAIN */
+.main {
+    padding: 40px;
+    border-right: 2px solid var(--accent);
+}
+
+/* TEAM */
+.team-photo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+}
+
+/* SECTION */
+.section {
+    margin-bottom: 35px;
+}
+
+.section h2 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* TENTANG PARAGRAF */
+.about-text {
+    line-height: 1.6;
+    font-size: 14px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--accent);
+}
+
+/* PROJECT */
+.project-main {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1.5px solid var(--accent);
+}
+
+/* FITUR */
+.project-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
