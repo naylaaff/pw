@@ -44,7 +44,7 @@ nav i{color:var(--accent);}
 position:absolute;
 color:var(--accent);
 opacity:0.22;
-text-shadow:0 0 10px rgba(63,174,124,0.4);
+text-shadow:0 0 10px rgba(244,162,97,0.4);
 animation:float 6s infinite ease-in-out;
 }
 .floating i:nth-child(1){top:5%;left:5%;font-size:40px;}
@@ -87,28 +87,15 @@ border:2px solid var(--accent);
 cursor:pointer;
 transition:0.3s;
 }
-.member img:hover{
-transform:scale(1.1);
-}
+.member img:hover{transform:scale(1.1);}
 
-/* PULSE ANIMATION */
+/* PULSE */
 @keyframes pulse {
-0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(63,174,124,0.5);
+0% {transform: scale(1);}
+70% {transform: scale(1.1);}
+100% {transform: scale(1);}
 }
-70% {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 10px rgba(63,174,124,0);
-}
-100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(63,174,124,0);
-}
-}
-.pulse {
-animation: pulse 0.6s ease;
-}
+.pulse {animation: pulse 0.6s ease;}
 
 /* SECTION */
 .section{margin-bottom:35px;}
@@ -121,8 +108,6 @@ padding:15px;
 border-radius:10px;
 border:1px solid var(--accent);
 line-height:1.6;
-font-size:16px;
-
 }
 
 /* PROJECT */
@@ -165,13 +150,14 @@ padding:60px 80px;
 background:var(--secondary);
 border-top:3px solid var(--accent);
 }
+
 .extra h2{
-color:var(--text);
 margin-bottom:10px;
 display:flex;
 align-items:center;
 gap:8px;
 }
+
 .extra-box{
 background:white;
 padding:18px 20px;
@@ -180,18 +166,33 @@ border:1px solid var(--accent);
 margin-bottom:25px;
 line-height:1.8;
 }
+
 .extra-box p{
 margin:6px 0;
 display:flex;
 align-items:center;
 gap:8px;
 }
+
 .extra i{color:var(--accent);}
+
 .divider{
 height:1px;
 background:var(--accent);
 margin:25px 0;
 opacity:0.4;
+}
+
+/* TOAST */
+#toast{
+position:fixed;
+bottom:20px;
+right:20px;
+background:var(--accent);
+color:white;
+padding:12px 20px;
+border-radius:8px;
+display:none;
 }
 
 /* POPUP */
@@ -212,19 +213,6 @@ width:320px;
 border-top:5px solid var(--accent);
 }
 .close{cursor:pointer;float:right;}
-
-/* TOAST */
-#toast{
-position:fixed;
-bottom:20px;
-right:20px;
-background:var(--accent);
-color:white;
-padding:12px 20px;
-border-radius:8px;
-display:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
 
 /* FOOTER */
 footer{
@@ -271,20 +259,22 @@ border-top:2px solid var(--accent);
 
 <div class="team-photo">
 <div class="member"><img src="nay.jpeg"><h4>Nayla</h4><p>Backend</p></div>
-<div class="member"><img src="ezrina.jpeg"><h4>Ezrina</h4><p>Frontend</p></div>
+<div class="member"><img src="sabrina.jpeg"><h4>Sabrina</h4><p>Frontend</p></div>
 <div class="member"><img src="aliqa.jpeg"><h4>Aliqa</h4><p>Database</p></div>
-<div class="member"><img src="sabrinaa.jpeg"><h4>Sabrina</h4><p>UI/UX</p></div>
+<div class="member"><img src="ezrina.jpeg"><h4>Ezrina</h4><p>UI/UX</p></div>
 </div>
 
 <div class="section" id="about">
 <h2><i class="fa-solid fa-users"></i> Tentang Kami</h2>
-<div class="about-text" style="font-size:16px;">
-Kami adalah tim mahasiswa informatika yang mengembangkan aplikasi kesehatan digital untuk membantu pengguna dalam mengelola konsumsi obat secara lebih teratur dan efisien.
+<div class="about-text">
+Kami adalah tim mahasiswa informatika yang terdiri dari Nayla, Ezrina, Aliqa, dan Sabrina yang berfokus pada pengembangan solusi digital di bidang kesehatan. Melalui proyek <b>MedMinder</b>, kami merancang sistem untuk membantu pengguna mengatur dan memantau konsumsi obat secara lebih teratur, efisien, dan terstruktur.
+
+Dalam pengembangannya, Nayla berperan sebagai backend developer, Ezrina sebagai UI/UX designer, Aliqa dalam pengelolaan database, dan Sabrina pada pengembangan frontend. Kami berharap aplikasi ini dapat membantu meningkatkan kedisiplinan pengguna dalam menjaga kesehatan melalui pemanfaatan teknologi yang sederhana namun efektif.
 </div>
 </div>
 
 <div class="section" id="portfolio">
-<h3><i class="fa-solid fa-briefcase-medical"></i> Portofolio</h3>
+<h2><i class="fa-solid fa-briefcase-medical"></i> Portofolio</h2>
 
 <div class="project-main" onclick="openPopup('QR Login','Login menggunakan barcode agar cepat dan aman.')">
 <i class="fa-solid fa-barcode"></i> QR Login
@@ -324,11 +314,36 @@ medminder@mail.com
 
 </div>
 
+<!-- EXTRA RAMAI -->
 <div class="extra">
+
 <h2><i class="fa-solid fa-notes-medical"></i> Informasi Tambahan</h2>
 <div class="extra-box">
-<p>MedMinder membantu pengguna mengatur jadwal konsumsi obat secara otomatis.</p>
+<p><i class="fa-solid fa-circle-info"></i> MedMinder membantu pengguna mengatur jadwal konsumsi obat secara otomatis dan terstruktur.</p>
+<p><i class="fa-solid fa-bell"></i> Memberikan pengingat agar pengguna tidak lupa minum obat.</p>
+<p><i class="fa-solid fa-user-shield"></i> Data pengguna tersimpan dengan aman.</p>
 </div>
+
+<div class="divider"></div>
+
+<h2><i class="fa-solid fa-capsules"></i> Fitur Utama</h2>
+<div class="extra-box">
+<p><i class="fa-solid fa-barcode"></i> Login menggunakan QR Code</p>
+<p><i class="fa-solid fa-clock"></i> Penjadwalan otomatis</p>
+<p><i class="fa-solid fa-check-circle"></i> Monitoring konsumsi harian</p>
+<p><i class="fa-solid fa-file-excel"></i> Export data ke Excel</p>
+</div>
+
+<div class="divider"></div>
+
+<h2><i class="fa-solid fa-star"></i> Keunggulan</h2>
+<div class="extra-box">
+<p><i class="fa-solid fa-circle-check"></i> Mudah digunakan</p>
+<p><i class="fa-solid fa-circle-check"></i> Sistem efisien</p>
+<p><i class="fa-solid fa-circle-check"></i> Membantu disiplin kesehatan</p>
+<p><i class="fa-solid fa-heart"></i> Tampilan modern & nyaman dilihat</p>
+</div>
+
 </div>
 
 <div id="toast"></div>
@@ -361,13 +376,10 @@ toast.style.display="block";
 setTimeout(()=>{toast.style.display="none";},2000);
 }
 
-/* PULSE FOTO */
 document.querySelectorAll('.member img').forEach(img => {
     img.addEventListener('click', function(){
         this.classList.add('pulse');
-        setTimeout(() => {
-            this.classList.remove('pulse');
-        }, 600);
+        setTimeout(()=>this.classList.remove('pulse'),600);
     });
 });
 </script>
