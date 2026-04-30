@@ -84,6 +84,30 @@ text-align:center;
 width:80px;height:80px;
 border-radius:50%;
 border:2px solid var(--accent);
+cursor:pointer;
+transition:0.3s;
+}
+.member img:hover{
+transform:scale(1.1);
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(63,174,124,0.5);
+}
+70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(63,174,124,0);
+}
+100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(63,174,124,0);
+}
+}
+.pulse {
+animation: pulse 0.6s ease;
 }
 
 /* SECTION */
@@ -133,13 +157,12 @@ border:1px solid var(--accent);
 font-size:13px;
 }
 
-/* EXTRA (BAGIAN BAWAH RAPIIH) */
+/* EXTRA */
 .extra{
 padding:60px 80px;
 background:var(--secondary);
 border-top:3px solid var(--accent);
 }
-
 .extra h2{
 color:var(--text);
 margin-bottom:10px;
@@ -147,7 +170,6 @@ display:flex;
 align-items:center;
 gap:8px;
 }
-
 .extra-box{
 background:white;
 padding:18px 20px;
@@ -156,18 +178,13 @@ border:1px solid var(--accent);
 margin-bottom:25px;
 line-height:1.8;
 }
-
 .extra-box p{
 margin:6px 0;
 display:flex;
 align-items:center;
 gap:8px;
 }
-
-.extra i{
-color:var(--accent);
-}
-
+.extra i{color:var(--accent);}
 .divider{
 height:1px;
 background:var(--accent);
@@ -252,9 +269,9 @@ border-top:2px solid var(--accent);
 
 <div class="team-photo">
 <div class="member"><img src="nay.jpeg"><h4>Nayla</h4><p>Backend</p></div>
-<div class="member"><img src="sabrinaa.jpeg"><h4>Sabrina</h4><p>Frontend</p></div>
+<div class="member"><img src="ezrina.jpeg"><h4>Ezrina</h4><p>Frontend</p></div>
 <div class="member"><img src="aliqa.jpeg"><h4>Aliqa</h4><p>Database</p></div>
-<div class="member"><img src="ezrina.jpeg"><h4>Ezrina</h4><p>UI/UX</p></div>="
+<div class="member"><img src="sabrinaa.jpeg"><h4>Sabrina</h4><p>UI/UX</p></div>
 </div>
 
 <div class="section" id="about">
@@ -305,41 +322,15 @@ medminder@mail.com
 
 </div>
 
-<!-- BAGIAN BAWAH -->
 <div class="extra">
-
 <h2><i class="fa-solid fa-notes-medical"></i> Informasi Tambahan</h2>
 <div class="extra-box">
-<p>
-MedMinder merupakan aplikasi yang membantu pengguna dalam mengatur jadwal konsumsi obat secara otomatis dan terstruktur, sehingga dapat mengurangi risiko lupa serta meningkatkan efektivitas penggunaan obat.
-</p>
+<p>MedMinder membantu pengguna mengatur jadwal konsumsi obat secara otomatis.</p>
+</div>
 </div>
 
-<div class="divider"></div>
-
-<h2><i class="fa-solid fa-capsules"></i> Fitur Utama</h2>
-<div class="extra-box">
-<p><i class="fa-solid fa-barcode"></i> Login menggunakan QR Code</p>
-<p><i class="fa-solid fa-clock"></i> Penjadwalan otomatis</p>
-<p><i class="fa-solid fa-check-circle"></i> Monitoring konsumsi harian</p>
-<p><i class="fa-solid fa-file-excel"></i> Export data ke Excel</p>
-</div>
-
-<div class="divider"></div>
-
-<h2><i class="fa-solid fa-star"></i> Keunggulan</h2>
-<div class="extra-box">
-<p><i class="fa-solid fa-circle-check"></i> Mudah digunakan</p>
-<p><i class="fa-solid fa-circle-check"></i> Sistem efisien</p>
-<p><i class="fa-solid fa-circle-check"></i> Membantu disiplin kesehatan</p>
-</div>
-
-</div>
-
-<!-- TOAST -->
 <div id="toast"></div>
 
-<!-- POPUP -->
 <div class="popup" id="popup">
 <div class="popup-content">
 <span class="close" onclick="closePopup()">X</span>
@@ -367,8 +358,17 @@ toast.innerText=msg;
 toast.style.display="block";
 setTimeout(()=>{toast.style.display="none";},2000);
 }
+
+/* PULSE FOTO */
+document.querySelectorAll('.member img').forEach(img => {
+    img.addEventListener('click', function(){
+        this.classList.add('pulse');
+        setTimeout(() => {
+            this.classList.remove('pulse');
+        }, 600);
+    });
+});
 </script>
 
 </body>
 </html>
-```
